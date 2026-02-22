@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Memoris — Service d'entretien de tombes en Île-de-France. Nettoyage, fleurs, photos et suivi pour les familles éloignées." />
+  <title>Memoris — Prenez soin de leurs tombes, même de loin</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav">
+    <div class="container nav__inner">
+      <a href="#" class="nav__logo">Memoris</a>
+      <ul class="nav__links">
+        <li><a href="#">Accueil</a></li>
+        <li><a href="#comment">Comment ça marche</a></li>
+        <li><a href="#prestations">Prestations</a></li>
+        <li><a href="#tarifs">Tarifs</a></li>
+        <li><a href="#contact" class="btn btn--sm">Nous contacter</a></li>
+      </ul>
+      <button class="nav__burger" aria-label="Menu" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__mobile" id="mobileMenu">
+      <a href="#" onclick="toggleMenu()">Accueil</a>
+      <a href="#comment" onclick="toggleMenu()">Comment ça marche</a>
+      <a href="#prestations" onclick="toggleMenu()">Prestations</a>
+      <a href="#tarifs" onclick="toggleMenu()">Tarifs</a>
+      <a href="#contact" onclick="toggleMenu()">Nous contacter</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <span class="hero__badge">Île-de-France</span>
+        <h1 class="hero__title">Prenez soin de leurs tombes,<br /><em>même de loin.</em></h1>
+        <p class="hero__subtitle">
+          Vous habitez loin, votre emploi du temps ne vous permet pas de vous déplacer aussi souvent que vous le souhaiteriez. Memoris s'en charge pour vous : nettoyage, fleurs, photos et rapport après chaque visite.
+        </p>
+        <div class="hero__actions">
+          <a href="#contact" class="btn btn--primary">Demander un devis gratuit</a>
+          <a href="#comment" class="btn btn--ghost">Voir comment ça marche</a>
+        </div>
+        <div class="hero__trust">
+          <span>✓ Photos avant / après</span>
+          <span>✓ Rapport après chaque visite</span>
+          <span>✓ Sans engagement</span>
+        </div>
+      </div>
+      <div class="hero__visual">
+        <div class="hero__img-wrap">
+          <img src="cimetiere_fleurs.jpg" alt="Tombe entretenue avec des fleurs" />
+          <div class="hero__img-badge">
+            <span class="badge__icon">📸</span>
+            <div>
+              <strong>Photos incluses</strong>
+              <small>Avant &amp; après chaque visite</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLÈME / SOLUTION -->
+  <section class="problem">
+    <div class="container">
+      <div class="problem__grid">
+        <div class="problem__card problem__card--dark">
+          <span class="problem__icon">💭</span>
+          <h3>La culpabilité de ne pas pouvoir y être</h3>
+          <p>Vous habitez à des centaines de kilomètres. Vous aimeriez fleurir la tombe de vos proches pour les fêtes, les anniversaires… mais c'est impossible.</p>
+        </div>
+        <div class="problem__card problem__card--light">
+          <span class="problem__icon">🌿</span>
+          <h3>Memoris prend le relais</h3>
+          <p>Nous visitons, nettoyons et entretenons la tombe de votre proche. Vous recevez des photos et un rapport après chaque intervention. Vous gardez le contrôle, sans vous déplacer.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMENT ÇA MARCHE -->
+  <section class="steps" id="comment">
+    <div class="container">
+      <div class="section-header">
+        <h2>Comment ça marche</h2>
+        <p>Un service simple, en 4 étapes</p>
+      </div>
+      <div class="steps__grid">
+        <div class="step">
+          <div class="step__number">1</div>
+          <h4>Vous nous contactez</h4>
+          <p>Vous remplissez le formulaire avec les informations du défunt et le cimetière. Nous vous recontactons sous 24h.</p>
+        </div>
+        <div class="step__divider"></div>
+        <div class="step">
+          <div class="step__number">2</div>
+          <h4>On établit un programme</h4>
+          <p>Selon votre abonnement, on planifie les visites : mensuelle, trimestrielle ou événementielle (Toussaint, Noël…).</p>
+        </div>
+        <div class="step__divider"></div>
+        <div class="step">
+          <div class="step__number">3</div>
+          <h4>On intervient</h4>
+          <p>Nettoyage, désherbage, fleurs, bougies… Chaque visite suit une checklist qualité rigoureuse.</p>
+        </div>
+        <div class="step__divider"></div>
+        <div class="step">
+          <div class="step__number">4</div>
+          <h4>Vous recevez le rapport</h4>
+          <p>Photos avant/après et compte-rendu détaillé par email dans les 24h suivant l'intervention.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRESTATIONS -->
+  <section class="services" id="prestations">
+    <div class="container">
+      <div class="section-header">
+        <h2>Nos prestations</h2>
+        <p>Chaque visite comprend les soins essentiels, avec des options personnalisables</p>
+      </div>
+      <div class="services__grid">
+        <div class="service-card">
+          <div class="service-card__icon">🧹</div>
+          <h4>Nettoyage complet</h4>
+          <p>Brossage de la pierre tombale, nettoyage des inscriptions, retrait des résidus et saletés.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-card__icon">🌱</div>
+          <h4>Désherbage</h4>
+          <p>Entretien du pourtour de la tombe, retrait des mauvaises herbes et des feuilles mortes.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-card__icon">🌸</div>
+          <h4>Dépôt de fleurs</h4>
+          <p>Bouquets de saison ou compositions florales selon vos préférences et le budget choisi.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-card__icon">📸</div>
+          <h4>Photos avant / après</h4>
+          <p>Documentation photographique complète envoyée par email après chaque intervention.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-card__icon">🕯️</div>
+          <h4>Bougies &amp; décorations</h4>
+          <p>Dépôt de bougies, lampions ou ornements saisonniers (Toussaint, Noël, Pâques…).</p>
+        </div>
+        <div class="service-card">
+          <div class="service-card__icon">📋</div>
+          <h4>Rapport de visite</h4>
+          <p>Compte-rendu détaillé : état général, travaux effectués, recommandations si nécessaire.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TARIFS -->
+  <section class="pricing" id="tarifs">
+    <div class="container">
+      <div class="section-header">
+        <h2>Tarifs</h2>
+        <p>Des abonnements clairs, sans mauvaise surprise</p>
+      </div>
+      <div class="pricing__grid">
+
+        <div class="pricing-card">
+          <div class="pricing-card__header">
+            <h3>Essentiel</h3>
+            <p>Pour rester connecté à l'essentiel</p>
+          </div>
+          <div class="pricing-card__price">
+            <span class="price">29 €</span>
+            <span class="period">/ visite</span>
+          </div>
+          <ul class="pricing-card__features">
+            <li>✓ 1 visite par trimestre</li>
+            <li>✓ Nettoyage complet</li>
+            <li>✓ Désherbage</li>
+            <li>✓ Photos avant / après</li>
+            <li>✓ Rapport par email</li>
+            <li class="disabled">✗ Fleurs incluses</li>
+            <li class="disabled">✗ Visites événementielles</li>
+          </ul>
+          <a href="#contact" class="btn btn--outline">Choisir ce forfait</a>
+        </div>
+
+        <div class="pricing-card pricing-card--featured">
+          <div class="pricing-card__badge">Le plus populaire</div>
+          <div class="pricing-card__header">
+            <h3>Sérénité</h3>
+            <p>L'entretien régulier et les fleurs</p>
+          </div>
+          <div class="pricing-card__price">
+            <span class="price">49 €</span>
+            <span class="period">/ mois</span>
+          </div>
+          <ul class="pricing-card__features">
+            <li>✓ 1 visite par mois</li>
+            <li>✓ Nettoyage complet</li>
+            <li>✓ Désherbage</li>
+            <li>✓ Photos avant / après</li>
+            <li>✓ Rapport par email</li>
+            <li>✓ Bouquet de saison inclus</li>
+            <li class="disabled">✗ Visites événementielles</li>
+          </ul>
+          <a href="#contact" class="btn btn--primary">Choisir ce forfait</a>
+        </div>
+
+        <div class="pricing-card">
+          <div class="pricing-card__header">
+            <h3>Mémoire</h3>
+            <p>La présence à chaque moment important</p>
+          </div>
+          <div class="pricing-card__price">
+            <span class="price">89 €</span>
+            <span class="period">/ mois</span>
+          </div>
+          <ul class="pricing-card__features">
+            <li>✓ Visites illimitées</li>
+            <li>✓ Nettoyage complet</li>
+            <li>✓ Désherbage</li>
+            <li>✓ Photos avant / après</li>
+            <li>✓ Rapport par email</li>
+            <li>✓ Bouquet premium inclus</li>
+            <li>✓ Visites Toussaint, Noël, anniversaires</li>
+          </ul>
+          <a href="#contact" class="btn btn--outline">Choisir ce forfait</a>
+        </div>
+
+      </div>
+      <p class="pricing__note">Tous nos abonnements sont sans engagement. Possibilité de service à la carte sur demande.</p>
+    </div>
+  </section>
+
+  <!-- GALERIE -->
+  <section class="gallery">
+    <div class="container">
+      <div class="section-header">
+        <h2>Avant / Après</h2>
+        <p>Le résultat de nos interventions parle de lui-même</p>
+      </div>
+      <div class="gallery__grid">
+        <div class="gallery__item">
+          <div class="gallery__label gallery__label--before">Avant</div>
+          <img src="https://images.unsplash.com/photo-1584559582128-b8be739912e1?w=400&q=80" alt="Tombe avant entretien" />
+        </div>
+        <div class="gallery__item">
+          <div class="gallery__label gallery__label--after">Après</div>
+          <img src="cimetiere_fleurs.jpg" alt="Tombe après entretien" />
+        </div>
+        <div class="gallery__item">
+          <div class="gallery__label gallery__label--before">Avant</div>
+          <img src="https://images.unsplash.com/photo-1601979031925-424e53b6caaa?w=400&q=80" alt="Tombe avant entretien" />
+        </div>
+        <div class="gallery__item">
+          <div class="gallery__label gallery__label--after">Après</div>
+          <img src="cimetiere_fleurs.jpg" alt="Tombe après entretien" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact__inner">
+        <div class="contact__info">
+          <h2>Demandez un devis gratuit</h2>
+          <p>Remplissez le formulaire, nous vous recontactons sous <strong>24 heures</strong> pour établir un programme adapté à vos besoins.</p>
+          <ul class="contact__reassurance">
+            <li>✓ Devis gratuit et sans engagement</li>
+            <li>✓ Intervention sous 7 jours</li>
+            <li>✓ Zone Île-de-France</li>
+            <li>✓ Disponible 7j/7</li>
+          </ul>
+        </div>
+        <form class="contact__form" action="https://formspree.io/f/VOTRE_ID_FORMSPREE" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="prenom">Prénom</label>
+              <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" required />
+            </div>
+            <div class="form-group">
+              <label for="nom">Nom</label>
+              <input type="text" id="nom" name="nom" placeholder="Votre nom" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="votre@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="telephone">Téléphone</label>
+            <input type="tel" id="telephone" name="telephone" placeholder="06 XX XX XX XX" />
+          </div>
+          <div class="form-group">
+            <label for="cimetiere">Cimetière concerné</label>
+            <input type="text" id="cimetiere" name="cimetiere" placeholder="Ex: Cimetière du Père-Lachaise, Paris 20e" required />
+          </div>
+          <div class="form-group">
+            <label for="forfait">Forfait souhaité</label>
+            <select id="forfait" name="forfait">
+              <option value="">Sélectionnez un forfait</option>
+              <option value="essentiel">Essentiel — 29€ / visite</option>
+              <option value="serenite">Sérénité — 49€ / mois</option>
+              <option value="memoire">Mémoire — 89€ / mois</option>
+              <option value="carte">À la carte / Je ne sais pas encore</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message (optionnel)</label>
+            <textarea id="message" name="message" rows="3" placeholder="Informations complémentaires, date souhaitée, demandes spécifiques…"></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full">Envoyer ma demande</button>
+          <p class="form__note">En soumettant ce formulaire, vous acceptez d'être recontacté par Memoris. Aucune information n'est partagée avec des tiers.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#" class="nav__logo">Memoris</a>
+        <p>Service d'entretien de tombes<br />en Île-de-France</p>
+      </div>
+      <div class="footer__links">
+        <h5>Navigation</h5>
+        <a href="#">Accueil</a>
+        <a href="#comment">Comment ça marche</a>
+        <a href="#prestations">Prestations</a>
+        <a href="#tarifs">Tarifs</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer__contact">
+        <h5>Contact</h5>
+        <a href="mailto:contact@memoris.fr">contact@memoris.fr</a>
+        <a href="tel:+33600000000">06 00 00 00 00</a>
+        <p>Île-de-France</p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2025 Memoris · Tous droits réservés · <a href="#">Mentions légales</a></p>
+    </div>
+  </footer>
+
+  <!-- BOUTON RETOUR EN HAUT -->
+  <button class="scroll-top" id="scrollTop" aria-label="Retour en haut" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8679;</button>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('open');
+    }
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const href = this.getAttribute('href');
+        if (href === '#') {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        } else {
+          const target = document.querySelector(href);
+          if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // Bouton scroll-to-top
+    const scrollTopBtn = document.getElementById('scrollTop');
+    window.addEventListener('scroll', () => {
+      scrollTopBtn.classList.toggle('visible', window.scrollY > 300);
+    });
+
+    // Form submission feedback
+    const form = document.querySelector('.contact__form');
+    if (form) {
+      form.addEventListener('submit', function(e) {
+        const btn = form.querySelector('button[type="submit"]');
+        btn.textContent = 'Envoi en cours…';
+        btn.disabled = true;
+      });
+    }
+  </script>
+
+</body>
+</html>
