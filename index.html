@@ -410,13 +410,34 @@
       scrollTopBtn.classList.toggle('visible', window.scrollY > 300);
     });
 
-    // Form submission feedback
+    // Form submission via AJAX (sans redirection)
     const form = document.querySelector('.contact__form');
     if (form) {
-      form.addEventListener('submit', function(e) {
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
         const btn = form.querySelector('button[type="submit"]');
         btn.textContent = 'Envoi en cours…';
         btn.disabled = true;
+
+        try {
+          const response = await fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+            headers: { 'Accept': 'application/json' }
+          });
+
+          if (response.ok) {
+            form.innerHTML = '<div class="form__success"><strong>Merci pour votre message !</strong><p>Nous vous recontacterons sous 24h.</p></div>';
+          } else {
+            btn.textContent = 'Envoyer ma demande';
+            btn.disabled = false;
+            alert('Une erreur est survenue. Veuillez réessayer ou nous appeler au 06 67 15 72 47.');
+          }
+        } catch (err) {
+          btn.textContent = 'Envoyer ma demande';
+          btn.disabled = false;
+          alert('Une erreur est survenue. Veuillez réessayer ou nous appeler au 06 67 15 72 47.');
+        }
       });
     }
   </script>

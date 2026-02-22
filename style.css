@@ -762,6 +762,22 @@ ul {
   min-height: 90px;
 }
 
+.form__success {
+  text-align: center;
+  padding: 48px 24px;
+  color: var(--color-primary);
+}
+
+.form__success strong {
+  display: block;
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+}
+
+.form__success p {
+  color: var(--color-text-muted);
+}
+
 .form__note {
   font-size: 0.78rem;
   color: var(--color-text-muted);
