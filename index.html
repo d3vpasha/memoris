@@ -250,19 +250,19 @@
       <div class="gallery__grid">
         <div class="gallery__item">
           <div class="gallery__label gallery__label--before">Avant</div>
-          <img src="https://images.unsplash.com/photo-1584559582128-b8be739912e1?w=400&q=80" alt="Tombe avant entretien" />
+          <img src="nettoyage_tombe_1_avant.jpg" alt="Tombe avant entretien" />
         </div>
         <div class="gallery__item">
           <div class="gallery__label gallery__label--after">Après</div>
-          <img src="cimetiere_fleurs.jpg" alt="Tombe après entretien" />
+          <img src="nettoyage_tombe_1_apres.jpg" alt="Tombe après entretien" />
         </div>
         <div class="gallery__item">
           <div class="gallery__label gallery__label--before">Avant</div>
-          <img src="https://images.unsplash.com/photo-1601979031925-424e53b6caaa?w=400&q=80" alt="Tombe avant entretien" />
+          <img src="nettoyage_tombe_2_avant.jpg" alt="Tombe avant entretien" />
         </div>
         <div class="gallery__item">
           <div class="gallery__label gallery__label--after">Après</div>
-          <img src="cimetiere_fleurs.jpg" alt="Tombe après entretien" />
+          <img src="nettoyage_tombe_2_apres.jpg" alt="Tombe après entretien" />
         </div>
       </div>
     </div>
@@ -353,6 +353,12 @@
     </div>
   </footer>
 
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox__close" onclick="closeLightbox()">&times;</button>
+    <img class="lightbox__img" id="lightboxImg" src="" alt="" onclick="event.stopPropagation()" />
+  </div>
+
   <!-- BOUTON RETOUR EN HAUT -->
   <button class="scroll-top" id="scrollTop" aria-label="Retour en haut" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8679;</button>
 
@@ -381,6 +387,21 @@
           if (select) select.value = forfait;
         }
       });
+    });
+
+    // Lightbox
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('open');
+    }
+    document.querySelectorAll('.gallery__item img').forEach(img => {
+      img.addEventListener('click', function() {
+        document.getElementById('lightboxImg').src = this.src;
+        document.getElementById('lightboxImg').alt = this.alt;
+        document.getElementById('lightbox').classList.add('open');
+      });
+    });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeLightbox();
     });
 
     // Bouton scroll-to-top
