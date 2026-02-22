@@ -440,8 +440,8 @@ ul {
 
 .step__divider {
   flex: 0 0 60px;
-  height: 2px;
-  background: var(--color-border);
+  height: 0;
+  border-top: 2px dashed var(--color-border);
   margin-top: 26px;
   position: relative;
 }
@@ -449,10 +449,12 @@ ul {
 .step__divider::after {
   content: '›';
   position: absolute;
-  right: -8px;
-  top: -14px;
+  right: -10px;
+  top: 0;
+  transform: translateY(-50%);
   color: var(--color-border);
-  font-size: 1.25rem;
+  font-size: 1.5rem;
+  line-height: 1;
 }
 
 /* ============ SERVICES ============ */
