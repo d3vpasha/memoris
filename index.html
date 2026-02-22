@@ -176,66 +176,63 @@
 
         <div class="pricing-card">
           <div class="pricing-card__header">
-            <h3>Essentiel</h3>
-            <p>Pour rester connecté à l'essentiel</p>
+            <h3>Fleurs</h3>
+            <p>Un geste simple pour honorer leur mémoire</p>
           </div>
           <div class="pricing-card__price">
             <span class="price">29 €</span>
             <span class="period">/ visite</span>
           </div>
           <ul class="pricing-card__features">
-            <li>✓ 1 visite par trimestre</li>
-            <li>✓ Nettoyage complet</li>
-            <li>✓ Désherbage</li>
+            <li>✓ Dépôt de fleurs de saison</li>
+            <li>✓ Retrait des fleurs fanées</li>
             <li>✓ Photos avant / après</li>
             <li>✓ Rapport par email</li>
-            <li class="disabled">✗ Fleurs incluses</li>
-            <li class="disabled">✗ Visites événementielles</li>
+            <li class="disabled">✗ Nettoyage de la pierre</li>
+            <li class="disabled">✗ Désherbage</li>
           </ul>
-          <a href="#contact" class="btn btn--outline">Choisir ce forfait</a>
+          <a href="#contact" class="btn btn--outline" data-forfait="fleurs">Choisir ce forfait</a>
+        </div>
+
+        <div class="pricing-card">
+          <div class="pricing-card__header">
+            <h3>Nettoyage</h3>
+            <p>Un entretien soigné, une tombe digne</p>
+          </div>
+          <div class="pricing-card__price">
+            <span class="price">49 €</span>
+            <span class="period">/ visite</span>
+          </div>
+          <ul class="pricing-card__features">
+            <li>✓ Nettoyage complet de la pierre</li>
+            <li>✓ Désherbage du pourtour</li>
+            <li>✓ Retrait des déchets</li>
+            <li>✓ Photos avant / après</li>
+            <li>✓ Rapport par email</li>
+            <li class="disabled">✗ Dépôt de fleurs</li>
+          </ul>
+          <a href="#contact" class="btn btn--outline" data-forfait="nettoyage">Choisir ce forfait</a>
         </div>
 
         <div class="pricing-card pricing-card--featured">
           <div class="pricing-card__badge">Le plus populaire</div>
           <div class="pricing-card__header">
-            <h3>Sérénité</h3>
-            <p>L'entretien régulier et les fleurs</p>
+            <h3>Complète</h3>
+            <p>Nettoyage et fleurs à intervalles réguliers</p>
           </div>
           <div class="pricing-card__price">
-            <span class="price">49 €</span>
+            <span class="price">99 €</span>
             <span class="period">/ mois</span>
           </div>
           <ul class="pricing-card__features">
-            <li>✓ 1 visite par mois</li>
-            <li>✓ Nettoyage complet</li>
-            <li>✓ Désherbage</li>
-            <li>✓ Photos avant / après</li>
-            <li>✓ Rapport par email</li>
+            <li>✓ Visites mensuelles planifiées</li>
+            <li>✓ Nettoyage complet de la pierre</li>
+            <li>✓ Désherbage du pourtour</li>
             <li>✓ Bouquet de saison inclus</li>
-            <li class="disabled">✗ Visites événementielles</li>
-          </ul>
-          <a href="#contact" class="btn btn--primary">Choisir ce forfait</a>
-        </div>
-
-        <div class="pricing-card">
-          <div class="pricing-card__header">
-            <h3>Mémoire</h3>
-            <p>La présence à chaque moment important</p>
-          </div>
-          <div class="pricing-card__price">
-            <span class="price">89 €</span>
-            <span class="period">/ mois</span>
-          </div>
-          <ul class="pricing-card__features">
-            <li>✓ Visites illimitées</li>
-            <li>✓ Nettoyage complet</li>
-            <li>✓ Désherbage</li>
             <li>✓ Photos avant / après</li>
-            <li>✓ Rapport par email</li>
-            <li>✓ Bouquet premium inclus</li>
-            <li>✓ Visites Toussaint, Noël, anniversaires</li>
+            <li>✓ Rapport détaillé par email</li>
           </ul>
-          <a href="#contact" class="btn btn--outline">Choisir ce forfait</a>
+          <a href="#contact" class="btn btn--primary" data-forfait="complete">Choisir ce forfait</a>
         </div>
 
       </div>
@@ -312,9 +309,9 @@
             <label for="forfait">Forfait souhaité</label>
             <select id="forfait" name="forfait">
               <option value="">Sélectionnez un forfait</option>
-              <option value="essentiel">Essentiel — 29€ / visite</option>
-              <option value="serenite">Sérénité — 49€ / mois</option>
-              <option value="memoire">Mémoire — 89€ / mois</option>
+              <option value="fleurs">Fleurs — 29€ / visite</option>
+              <option value="nettoyage">Nettoyage — 49€ / visite</option>
+              <option value="complete">Complète — 99€ / mois</option>
               <option value="carte">À la carte / Je ne sais pas encore</option>
             </select>
           </div>
@@ -370,11 +367,18 @@
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const href = this.getAttribute('href');
+        const forfait = this.dataset.forfait;
+
         if (href === '#') {
           window.scrollTo({ top: 0, behavior: 'smooth' });
         } else {
           const target = document.querySelector(href);
           if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        if (forfait) {
+          const select = document.getElementById('forfait');
+          if (select) select.value = forfait;
         }
       });
     });
